@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Menu | Osteria n.3 – Authentic Italian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <style>
+        :root{--primary:#c49a6c;--dark:#1e2a1c;--light:#fef9f0;--white:#fff;--gray:#5a5a5a;--font-head:'Playfair Display',serif;--font-body:'Poppins',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:var(--light)}
+        .container{max-width:1280px;margin:0 auto;padding:0 24px}
+        .btn{background:var(--primary);color:white;padding:12px 30px;border-radius:50px;text-decoration:none;display:inline-block}
+        .nav{position:fixed;width:100%;top:0;z-index:1000;padding:20px 0;background:transparent}
+        .nav-scrolled{background:rgba(30,42,28,0.95);backdrop-filter:blur(12px);padding:12px 0}
+        .nav .container{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.8rem;font-weight:700;font-family:var(--font-head);color:white;text-decoration:none}
+        .nav-links{display:flex;gap:2rem;list-style:none}
+        .nav-links a{color:white;text-decoration:none;font-weight:500}
+        .nav-links a:hover,.nav-links a.active{color:var(--primary)}
+        .mobile-menu{display:none;font-size:1.8rem;color:white;background:none;border:none;cursor:pointer}
+        .menu-hero{height:45vh;background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center/cover;display:flex;align-items:center;text-align:center;color:white;background-attachment:fixed}
+        .menu-hero h1{font-size:3.5rem}
+        .category-title{font-size:2.2rem;color:var(--primary);margin:60px 0 20px;text-align:center}
+        .menu-items-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:30px;margin-bottom:60px}
+        .menu-card{background:white;border-radius:24px;overflow:hidden;box-shadow:0 10px 20px rgba(0,0,0,0.05);transition:all 0.3s}
+        .menu-card:hover{transform:translateY(-6px);box-shadow:0 20px 35px rgba(0,0,0,0.1)}
+        .menu-card-img{height:190px;overflow:hidden}
+        .menu-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+        .menu-card:hover .menu-card-img img{transform:scale(1.03)}
+        .menu-card-content{padding:18px}
+        .menu-card-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+        .menu-card-header h3{font-size:1.2rem;font-weight:600}
+        .price{color:var(--primary);font-weight:700;font-size:1.1rem}
+        .desc{color:var(--gray);font-size:0.85rem;line-height:1.4}
+        .footer{background:var(--dark);color:white;text-align:center;padding:40px 0;margin-top:60px}
+        @media(max-width:768px){.mobile-menu{display:block}.nav-links{position:fixed;top:70px;left:-100%;width:80%;height:calc(100vh - 70px);background:var(--dark);flex-direction:column;align-items:center;padding-top:40px;transition:left 0.3s}.nav-links.active{left:0}.menu-hero h1{font-size:2rem}}
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <nav class="nav"><div class="container"><a href="index.html" class="logo">Osteria n.3</a><button class="mobile-menu">☰</button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html" class="active">Menu</a></li><li><a href="reservation.html">Reservation</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
+    <section class="menu-hero"><div class="container"><h1>Il Nostro Menu</h1><p>Handmade with love, inspired by Italy</p></div></section>
+
+    <div class="container">
+        <!-- Antipasti -->
+        <h2 class="category-title">Antipasti</h2>
+        <div class="menu-items-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bruschetta"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Bruschetta al Pomodoro</h3><span class="price">€8</span></div><div class="desc">Toasted bread, fresh tomatoes, garlic, basil, extra virgin olive oil</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Carpaccio"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Carpaccio di Manzo</h3><span class="price">€14</span></div><div class="desc">Thinly sliced raw beef, arugula, parmesan, lemon vinaigrette</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Calamari"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Calamari Fritti</h3><span class="price">€12</span></div><div class="desc">Crispy fried squid with marinara sauce</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Prosciutto e Melone"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Prosciutto e Melone</h3><span class="price">€13</span></div><div class="desc">Parma ham with seasonal melon</div></div></div>
+        </div>
+
+        <!-- Pasta -->
+        <h2 class="category-title">Pasta Fresca</h2>
+        <div class="menu-items-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tagliatelle"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Tagliatelle al Tartufo</h3><span class="price">€24</span></div><div class="desc">Fresh tagliatelle, black truffle cream, parmesan</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ravioli"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Ravioli di Ricotta e Spinaci</h3><span class="price">€22</span></div><div class="desc">Homemade ravioli, ricotta & spinach, sage butter</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Spaghetti Carbonara"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Spaghetti Carbonara</h3><span class="price">€22</span></div><div class="desc">Guanciale, egg yolk, pecorino, black pepper</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1579684947550-22e945225d9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lasagna"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Lasagna alla Bolognese</h3><span class="price">€20</span></div><div class="desc">Layered pasta, meat ragù, béchamel, parmesan</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pesto Pasta"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Trenette al Pesto</h3><span class="price">€19</span></div><div class="desc">Fresh trenette, basil pesto, green beans, potatoes</div></div></div>
+        </div>
+
+        <!-- Pizza -->
+        <h2 class="category-title">Pizza Napoletana</h2>
+        <div class="menu-items-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Margherita"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Margherita DOC</h3><span class="price">€14</span></div><div class="desc">San Marzano tomatoes, mozzarella di bufala, basil, olive oil</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Prosciutto"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Prosciutto e Rucola</h3><span class="price">€18</span></div><div class="desc">Parma ham, arugula, shaved parmesan</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Quattro Formaggi"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Quattro Formaggi</h3><span class="price">€16</span></div><div class="desc">Mozzarella, gorgonzola, parmigiano, fontina</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1548369937-47519962c11a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Diavola"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Diavola</h3><span class="price">€17</span></div><div class="desc">Spicy salami, tomato, mozzarella, chili flakes</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1571066811602-716837f681be?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Vegetariana"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Vegetariana</h3><span class="price">€16</span></div><div class="desc">Grilled zucchini, eggplant, bell peppers, olives</div></div></div>
+        </div>
+
+        <!-- Secondi -->
+        <h2 class="category-title">Secondi Piatti</h2>
+        <div class="menu-items-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Saltimbocca"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Saltimbocca alla Romana</h3><span class="price">€32</span></div><div class="desc">Veal scaloppine with prosciutto and sage, white wine sauce</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1569058242567-97a2b9c3a1b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Branzino"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Branzino al Forno</h3><span class="price">€34</span></div><div class="desc">Oven-roasted Mediterranean sea bass, lemon, herbs, olives</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ossobuco"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Ossobuco</h3><span class="price">€38</span></div><div class="desc">Braised veal shank with gremolata and saffron risotto</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gamberi"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Gamberi Piccanti</h3><span class="price">€29</span></div><div class="desc">Sautéed tiger prawns, chili, garlic, cherry tomatoes</div></div></div>
+        </div>
+
+        <!-- Dolci -->
+        <h2 class="category-title">Dolci</h2>
+        <div class="menu-items-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tiramisu"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Tiramisù Classico</h3><span class="price">€8</span></div><div class="desc">Layers of ladyfingers, mascarpone, espresso, cocoa</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Panna Cotta"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Panna Cotta</h3><span class="price">€7</span></div><div class="desc">Creamy panna cotta with mixed berry coulis</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1614707267537-b85a3f50f3c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cannoli"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Cannoli Siciliani</h3><span class="price">€6</span></div><div class="desc">Crispy pastry shells filled with sweet ricotta and chocolate chips</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1574085733277-851f9d5f5e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sorbet"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Sorbetto al Limone</h3><span class="price">€5</span></div><div class="desc">Refreshing lemon sorbet served in a frozen lemon</div></div></div>
+        </div>
+    </div>
+
+    <footer class="footer"><div class="container"><p>© 2025 Osteria n.3 – Praia, Cape Verde | +238 918610</p></div></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
